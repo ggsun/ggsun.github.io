@@ -1,1 +1,112 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gwanggyu Sun</title>
+  <meta name="description" content="Gwanggyu Sun — computational biologist at Arc Institute." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Hero ===== -->
+  <section id="home">
+    <div class="container">
+      <div class="hero">
+        <img src="assets/photo.png" alt="Cartoon of an RNA polymerase" class="hero-photo" width="160" height="160" />
+        <div class="hero-text">
+          <h1>Gwanggyu Sun</h1>
+          <p class="affiliation">
+            <a href="https://arcinstitute.org" target="_blank" rel="noopener">Arc Institute</a>
+            · Mountain View, CA
+          </p>
+          <p class="hero-bio">
+            Hello! I&rsquo;m a computational biologist developing tools to help us understand
+            the glorious mess that is biology.
+          </p>
+          <div class="hero-links">
+            <a href="https://scholar.google.com/citations?user=wu3L1u8AAAAJ&hl=en&oi=ao" class="btn btn-outline" target="_blank" rel="noopener">
+              Google Scholar
+            </a>
+            <a href="https://linkedin.com/in/ggsun" class="btn btn-outline" target="_blank" rel="noopener">
+              LinkedIn
+            </a>
+            <a href="mailto:gwanggyu.sun@arcinstitute.org" class="btn btn-outline">
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Research ===== -->
+  <section id="research">
+    <div class="container">
+      <h2 class="section-title">Research Highlights</h2>
+      <div class="project-list">
+
+        <div class="project-card">
+          <h3 class="project-title">Mapping the prokaryotic noncoding sequence space with Evo-PIN</h3>
+          <p class="project-desc">
+            Much of the noncoding DNA in prokaryotic genomes is still uncharted. I built COMPASS, a
+            pipeline that uses a fine-tuned DNA language model to map this sequence space. It
+            rediscovered many recently found noncoding systems and turned up thousands of new ones
+            that no one has characterized yet.
+          </p>
+          <div class="project-links">
+            <span class="pub-link">bioRxiv (2026)</span>
+            <a href="https://compass.arcinstitute.org" class="pub-link" target="_blank" rel="noopener">Website</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3 class="project-title">Evo 2: a language model trained on DNA</h3>
+          <p class="project-desc">
+            I worked on Evo 2, an open source language model that learned to read DNA from 9 trillion
+            base pairs spanning the tree of life. Without any task-specific supervision, we showed it
+            can predict the effects of genetic mutations, including clinically significant variants
+            of <em>BRCA1</em>.
+          </p>
+          <div class="project-links">
+            <a href="https://www.nature.com/articles/s41586-026-10176-5" class="pub-link" target="_blank" rel="noopener">Nature (2026)</a>
+            <a href="https://github.com/ArcInstitute/evo2" class="pub-link" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3 class="project-title"><em>E. coli</em> Whole-Cell Modeling</h3>
+          <p class="project-desc">
+            I built and extended a whole-cell model of <em>E. coli</em> that brings thousands of
+            biochemical reactions, from transcription and translation to metabolism and DNA
+            replication, into a single genome-scale simulation. We used it to cross-check diverse
+            experimental datasets against each other and to ask how operon structure shapes gene
+            expression and cellular physiology.
+          </p>
+          <div class="project-links">
+            <a href="https://doi.org/10.1016/j.cels.2024.02.002" class="pub-link" target="_blank" rel="noopener">Cell Systems (2024)</a>
+            <a href="https://doi.org/10.1126/science.aav3751" class="pub-link" target="_blank" rel="noopener">Science (2020)</a>
+            <a href="https://github.com/CovertLab/wcEcoli" class="pub-link" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Gwanggyu Sun</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
